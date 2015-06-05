@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INRA Reporting</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/jquery.util.js"></script>
+        <script src="js/jquery.reporting.js"></script>
+        <script src="js/jquery.ihm.js"></script>
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <link rel="stylesheet" href="css/handheld.css" type="text/css" media="(max-width : 640px)">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html">
+                    <img class="logo" alt="reporting" src="img/logo.png" />
+                </a>
+                <span class="user-block">
+                    <span class="accueil">
+                        <a id="accueil" href="index.html" >Retour à l'accueil</a>
+                    </span>
+                    <span class="user-unlogged">
+                        <a id="loginLink" href="" onclick="$.reporting.authenticate();return false;">Se connecter</a>
+                    </span>
+                    <span class="user-logged hidden">
+                        <span id="userInfos"></span>
+                        -
+                        <span><a id="logoutLink" href="">Se d&eacute;connecter</a></span>
+                    </span>
+                </span>
+                <a href="#" id="feedbackLink">
+                    <span class="feedback right">
+                        Suggestions
+                    </span>
+                </a>
+            </div>
+        </header>
+        
+        <div class="content mentions-legales">
+            <h1>Crédits et Mentions légales</h1>
+            <p>
+                <strong>Raison sociale :</strong> INRA, Institut National de la Recherche Agronomique (Établissement public à caractère scientifique et technologique)
+            </p>
+            <br/>
+            <p>
+                <strong>Adresse : 147 rue de l'Université - 75338 Paris cedex 07<br/>
+                Directeur ou co-directeur de la publication : Jean-François Launay  - Caroline Thomas<br/>
+                Contact : webmaster@inra.fr.<br/>
+                Hébergement : Inra.</strong>
+            </p>
+            <br/>
+            <p>
+                <strong>Cookies et Statistiques</strong><br/>
+                L'utilisateur est informé qu'un cookie peut s'installer automatiquement sur son logiciel de navigation lors de ses visites sur le site. Le cookie est un bloc de données permettant d'enregistrer des informations relatives à la navigation de celui-ci sur le site. L'utilisation de ces cookies a pour finalité de procéder à des analyses de fréquentation et des mesures d'audience afin d'améliorer la qualité du site. Le paramétrage de logiciel de navigation permet d'informer de la présence du cookie et éventuellement de la refuser.
+            </p>
+            <br/>
+            <p>
+                <strong>Respect des données personnelles</strong><br/>
+                Aucune information personnelle n'est collectée à votre insu.
+                Aucune information personnelle n'est cédée à des tiers.
+                Ce site a été déclaré à la CNIL.
+                Vous disposez d'un droit d'accès, de rectification et d'opposition aux données vous concernant que vous pouvez exercer en envoyant un courriel à la personne dont l’adresse est notée dans la paragraphe « Informations légales » de cette page.
+            </p>
+            <br/>
+            <p>
+                <strong>Droit d’auteur - Copyright &copy; - réutilisation des contenus</strong><br/>
+                La reproduction de tout ou partie du contenu de ce site sur un support électronique est soumise à l’autorisation préalable de l’Inra, qui doit être demandée au contact mentionné sur le présent site.
+            </p>
+        </div>
+        
+        <div class="footer-size"></div>
+        <footer class="footer-size">
+            <div class="footer-item">
+                <a href="mentions_legales.html">Mentions-legales</a>
+            </div>
+            <div class="footer-item">
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="clear"></div>
+            <span id="applicationVersion">${project.version}</span>
+        </footer>
+        <script src="js/authenticationHome.js"></script>
+        <script src="js/display.js"></script>
+    </body>
+</html>

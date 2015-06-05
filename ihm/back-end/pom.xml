@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>fr.photoapplication</groupId>
+        <artifactId>ihm</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>back-end</artifactId>
+    <packaging>war</packaging>
+    <name>Back-end</name>
+    <description>IHM server-side for application.</description>
+
+    <prerequisites>
+        <maven>3.0.4</maven>
+    </prerequisites>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <dependency.details.enabled>false</dependency.details.enabled>
+        <dependency.locations.enabled>false</dependency.locations.enabled>
+        <main.basedir>${project.parent.basedir}</main.basedir>
+        <stub.activites.version>1.9.4</stub.activites.version>
+    </properties>
+
+	<scm>
+		<url>https://github.com/nicolaschevron/photographeApplication/ihm/back-end</url>
+		<connection>scm:git:git://github.com/nicolaschevron/photographeApplication.git</connection>
+		<developerConnection>scm:git:nicolas.chevron@gmail.com:nicolaschevron/photographeApplication.git</developerConnection>
+	</scm>
+
+    
+    <dependencies>    
+        <!-- Junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        
+    </dependencies>
+
+  
+
+</project>
+

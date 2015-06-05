@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+        <Resources className="org.apache.catalina.webresources.StandardRoot">
+                <PreResources className="org.apache.catalina.webresources.DirResourceSet"
+                            base="/opt/reportact.dev/conf-tomcat"
+                            internalPath="/"
+                            webAppMount="/WEB-INF/classes" />
+        </Resources>
+        
+        <Resource name="jdbc/reporting"
+        auth="Container"
+        type="javax.sql.DataSource"
+        maxActive="5"
+        maxIdle="5"
+        maxWait="5"
+        username="REPORTACT_DEV"
+        password="grangedi"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://vmi-dev-61.jouy.inra.fr:54414/REPORTACT_DEV"/>
+</Context>

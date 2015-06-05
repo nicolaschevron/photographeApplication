@@ -1,0 +1,36 @@
+<assembly>
+    <id>${item}</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    
+    <fileSets>
+    	 <fileSet>
+            <directory>${project.basedir}/src/main/conf/${item}</directory>
+            <outputDirectory>js</outputDirectory>
+            <includes>
+                <include>*.js</include>
+            </includes>
+        </fileSet> 
+    
+        <fileSet>
+            <directory>${project.basedir}</directory>
+            <useDefaultExcludes>false</useDefaultExcludes>
+            <filtered>false</filtered>
+            <includes>
+                <include>css/**</include>
+                <include>js/**</include>
+                <include>img/**</include>
+            </includes>
+        </fileSet>
+    
+        <fileSet>
+            <directory>${project.basedir}</directory>
+            <useDefaultExcludes>false</useDefaultExcludes>
+            <filtered>true</filtered>
+            <includes>
+                <include>*.html</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>

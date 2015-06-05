@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "config/dtd/log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+	<appender name="file_appender_back_end" class="org.apache.log4j.RollingFileAppender">
+        <param name="file" value="/home/niche/Documents/projets/INRAAgile/reporting/logs/back-end-reporting.log" />
+        <param name="append" value="true" />
+        <param name="encoding" value="UTF-8" />
+        <param name="MaxFileSize" value="10MB" />
+        <!-- Keep one backup file -->
+        <param name="MaxBackupIndex" value="5" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} - %5p - %l - %m%n" />
+        </layout>
+    </appender>
+    
+    <appender name="std-out" class="org.apache.log4j.ConsoleAppender">
+    	<param name="Target" value="System.out" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} - %5p - %l - %m%n" />
+        </layout>
+    </appender>
+    
+    <logger name="file_appender_back_end" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="file_appender_back_end" />
+    </logger>
+    
+    <category name="fr.inra">
+        <priority value="DEBUG" />
+    </category>
+
+    <category name="net.webassembletool">
+        <priority value="WARN" />
+    </category>
+
+    <category name="org.springframework">
+        <priority value="ERROR" />
+    </category>
+    
+    <category name="org.hibernate">
+        <priority value="INFO" />
+    </category>
+
+	<root>
+		<appender-ref ref="file_appender_back_end"/>
+    	<appender-ref ref="std-out"/>
+	</root>
+
+</log4j:configuration>

@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>fr.photoapplication</groupId>
+	    <artifactId>base</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>dao</artifactId>
+    <packaging>jar</packaging>
+    <name>DAO for photographeapplication app.</name>
+    <description>DAO used by photographeapplication</description>
+
+    <prerequisites>
+        <maven>3.0.4</maven>
+    </prerequisites>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <dependency.details.enabled>false</dependency.details.enabled>
+        <dependency.locations.enabled>false</dependency.locations.enabled>
+        <main.basedir>${project.parent.basedir}</main.basedir>
+    </properties>
+	
+	<developers>
+		<developer>
+		    <name>Nicolas Chevron</name>
+		    <email>nicolas.chevron@gmail.com</email>
+		    <organization>Perso</organization>
+		    <url>https://github.com/nicolaschevron</url>
+		    <id>nicolaschevron</id>
+		    <roles>
+		        <role>Developper</role>
+		    </roles>
+		</developer>
+	</developers>
+
+    <scm>
+	<url>https://github.com/nicolaschevron/photographeApplication</url>
+	<connection>scm:git:git://github.com/nicolaschevron/photographeApplication.git</connection>
+	<developerConnection>scm:git:nicolas.chevron@gmail.com:nicolaschevron/photographeApplication.git</developerConnection>
+    </scm>
+
+
+</project>
+

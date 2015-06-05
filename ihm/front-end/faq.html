@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INRA Reporting</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/jquery.util.js"></script>
+        <script src="js/jquery.reporting.js"></script>
+        <script src="js/jquery.ihm.js"></script>
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <link rel="stylesheet" href="css/handheld.css" type="text/css" media="(max-width : 640px)">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html">
+                    <img class="logo" alt="reporting" src="img/logo.png" />
+                </a>
+                <span class="user-block">
+                    <span class="accueil">
+                        <a id="accueil" href="index.html" >Retour à l'accueil</a>
+                    </span>
+                    <span class="user-unlogged">
+                        <a id="loginLink" href="" onclick="$.reporting.authenticate();return false;">Se connecter</a>
+                    </span>
+                    <span class="user-logged hidden">
+                        <span id="userInfos"></span>
+                        -
+                        <span><a id="logoutLink" href="">Se d&eacute;connecter</a></span>
+                    </span>
+                </span>
+                <a href="#" id="feedbackLink">
+                    <span class="feedback right">
+                        Suggestions
+                    </span>
+                </a>
+            </div>
+        </header>
+        
+        <div class="content faq">
+            <h1>Foire Aux Questions</h1>
+            <!-- Sommaire de la FAQ, décommenter quand on aura beaucoup de question -->
+            <!--
+            <div class="faq-links">
+                <a href="#export-excel">Le fichier d'export est illisible avec Excel, que faire ?</a>
+            </div>
+            -->
+            <h2 id="export-excel">Le fichier d'export est illisible avec Excel, que faire ?</h2>
+            <div class="text">
+                <p>
+                    Si vous rencontrez des problèmes pour ouvrir le CSV avec Excel, suivre la procédure suivante :
+                </p>
+                <ul>
+                    <li>Ouvrir un nouveau document excel</li>
+                    <li>Onglet "Données > Données externes - A partir du texte"</li>
+                    <li>Choisir "Délimité"  et "65001 : Unicode (UTF-8)" pour origine du fichier</li>
+                    <li>À l'étape suivante choisir "Point-virgule" puis "Terminer"</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-size"></div>
+        <footer class="footer-size">
+            <div class="footer-item">
+                <a href="mentions_legales.html">Mentions-legales</a>
+            </div>
+            <div class="footer-item">
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="clear"></div>
+            <span id="applicationVersion">${project.version}</span>
+        </footer>
+        <script src="js/authenticationHome.js"></script>
+        <script src="js/display.js"></script>
+    </body>
+</html>
